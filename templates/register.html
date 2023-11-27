@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="stylesregform.css">
+    <title>Patient Form</title>
+</head>
+<body>
+    <form action="" method="get">
+        <h1>Registration Form</h1>
+        <hr>
+        <div class="PersonalInfo">
+            <h2>Personal Information</h2>
+            <div class="row">
+                <div class="col col-md-4 col-sm-6">
+                    <label for="firstname">First Name: </label><input type="text" id="firstname" placeholder="First Name" required>
+                </div>
+                <div class="col col-md-4 col-sm-6">
+                    <label for="middlename">Middle Name: </label><input type="text" id="middlename" placeholder="Middle Name" required>
+                </div>
+                <div class="col col-md-4 col-sm-6">
+                    <label for="lastname">Last Name: </label><input type="text" id="lastname" placeholder="Last Name" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-lg-6 col-md-6 col-sm-12">
+                    <label for="gender">Gender: </label><input type="radio" name="gender" id="male"> <label for="male">Male</label> 
+                    <input type="radio" name="gender" id="female"> <label for="female">Female</label>
+                    <input type="radio" name="gender" id="Other"> <label for="other">Other</label>
+                </div>
+                <div class="col col-lg-6 col-md-6 col-sm-12">
+                    <label for="maritial_status">Marital Status: </label>
+                    <input type="radio" name="maritial_status" id="married"> <label for="married">Married</label>
+                    <input type="radio" name="maritial_status" id="single"> <label for="single">Single</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-lg-6 col-md-6 col-sm-12">
+                    <label for="dob">Date of Birth: </label><input type="date" id="dob" required>
+                </div>
+                <div class="col col-lg-6 col-md-6 col-sm-12">
+                    <label for="age">Age: </label><input type="text" id="age" placeholder="Age">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-lg-6 col-md-6 col-sm-12">
+                    <label for="address">Address: </label><input type="text" size="130rem" id="address" placeholder="Permanent Address" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-md-4 col-sm-6">
+                    <label for="city">City: </label><input type="text" id="city" placeholder="City" required>
+                </div>
+                <div class="col col-md-4 col-sm-6">
+                    <label for="state">State: </label><input type="text" id="state" placeholder="State" required>
+                </div>
+                <div class="col col-md-4 col-sm-6">
+                    <label for="pincode">PIN Code: </label>
+                    <input type="number" id="pincode" minlength="6" maxlength="6" placeholder="PIN Code" required>            
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-lg-6 col-md-6 col-sm-12">
+                    <label for="contactno1">Contact Number: </label>
+                    <input type="tel" id="contactno1" minlength="10" maxlength="10" placeholder="Contact Number" required>            
+                </div>
+                <div class="col col-lg-6 col-md-6 col-sm-12">
+                    <label for="contactno2">Alternate Contact Number: </label>
+                    <input type="tel" id="contactno2" minlength="10" maxlength="10" placeholder="Alternate Contact Number" required>            
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-lg-6 col-md-6 col-sm-12">
+                    <label for="email1">Email ID: </label>
+                    <input type="email" id="email1" size="28" placeholder="Email ID" required>          
+                </div>
+                <div class="col col-lg-6 col-md-6 col-sm-12">
+                    <label for="email2">Alternate Email ID: </label>
+                    <input type="email" id="email2" size="30" placeholder="Alternate Email ID">          
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-lg-6 col-md-6 col-sm-12">
+                    <label for="aadharid">Aadhar Number: </label>
+                    <input type="number" id="aadharid" minlength="12" maxlength="12" placeholder="Aadhar Number" required>          
+                </div>
+                <div class="col col-lg-6 col-md-6 col-sm-12">
+                    <label for="bloodgorup">Blood Group: </label>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <select name="bloodgorup" id="bloodgorup">
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="InsuranceInfo">
+            <h2>Insurance Information</h2>
+            <div class="row">
+                <div class="col col-lg-6 col-md-6 col-sm-12">
+                    <label for="planname">Plan Name: </label>
+                    <input type="text" id="planname" placeholder="Insurance Plan">            
+                </div>
+                <div class="col col-lg-6 col-md-6 col-sm-12">
+                    <label for="policyholder">Policy Holder: </label>
+                    <input type="text" id="policyholder" placeholder="Policy Holder's Name">            
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-lg-6 col-md-6 col-sm-12">
+                    <label for="policyid">Policy ID: </label>
+                    <input type="number" maxlength="15" placeholder="Policy ID">            
+                </div>
+                <div class="col col-lg-6 col-md-6 col-sm-12">
+                    <label for="agegroup">Age Group: </label>
+                    <select name="age" id="agegroup">
+                    <option value="0-18">0-18</option>
+                    <option value="18-60">18-60</option>
+                    <option value="Above 60">Above 60</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-lg-6 col-md-6 col-sm-12">
+                    <label for="effectivefrom">Effective from: </label><input type="date">
+                </div>
+                <div class="col col-lg-6 col-md-6 col-sm-12">
+                    <label for="effectivetill">Effective till: </label><input type="date">
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="GeneralHistory">
+            <h2>General Medical History</h2>
+            <div class="row">
+                <div class="col">
+                    <label for="allergies"><b>Allergies (if any):</b>
+                        <input type="checkbox" id="aspirin">&nbsp;<label for="aspirin">Aspirin</label>
+                        <input type="checkbox" id="Penicillin">&nbsp;<label for="penicillin">Penicillin</label>
+                        <input type="checkbox" id="codiene">&nbsp;<label for="codiene">Codiene</label>
+                        <input type="checkbox" id="localanesthetics">&nbsp;<label for="localanesthetics">Local Anesthetics</label>
+                        <input type="checkbox" id="metal">&nbsp;<label for="metal">Metal</label>
+                        <input type="checkbox" id="latex">&nbsp;<label for="latex">Latex</label>
+                        <input type="checkbox" id="sulphadrugs">&nbsp;<label for="sulphadrugs">Sulpha Drugs</label>
+                    </label>              
+                    </div>
+                </div>
+            <div class="row">
+                <div class="col">
+                    <label for="anyother">Any Other: <input type="text" id="anyother" size="130rem" placeholder="If Any Please Specify"></label>
+                </div>
+            </div>
+            <div class="Diseases">
+                <div class="row">
+                    <div class="col col-lg-4 col-md-6 col-sm-12">
+                        <label for="aids">AIDS/HIV Positive</label>
+                        <input type="radio" name="aids" id="aids"> <label for="aids">Yes</label>
+                        <input type="radio" name="aids" id="aids" checked> <label for="aids">No</label>              
+                    </div>
+                    <div class="col col-lg-4 col-md-6 col-sm-12">
+                        <label for="alzhiemer">Alzhiemer's Disease</label>
+                        <input type="radio" name="alzhiemer" id="alzhiemer"> <label for="alzhiemer">Yes</label>
+                        <input type="radio" name="alzhiemer" id="alzhiemer" checked> <label for="alzhiemer">No</label>              
+                    </div>
+                    <div class="col col-lg-4 col-md-6 col-sm-12">
+                        <label for="anemia">Anemia</label>
+                        <input type="radio" name="anemia" id="anemia"> <label for="anemia">Yes</label>
+                        <input type="radio" name="anemia" id="anemia" checked> <label for="anemia">No</label>              
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-lg-4 col-md-6 col-sm-12">
+                        <label for="arthritis">Arthritis</label>
+                        <input type="radio" name="arthritis" id="arthritis"> <label for="arthritis">Yes</label>
+                        <input type="radio" name="arthritis" id="arthritis" checked> <label for="arthritis">No</label>              
+                    </div>
+                    <div class="col col-lg-4 col-md-6 col-sm-12">
+                        <label for="asthma">Asthma</label>
+                        <input type="radio" name="asthma" id="asthma"> <label for="asthma">Yes</label>
+                        <input type="radio" name="asthma" id="asthma" checked> <label for="asthma">No</label>
+                    </div>
+                    <div class="col col-lg-4 col-md-6 col-sm-12">
+                        <label for="blooddisease">Blood Disease</label>
+                        <input type="radio" name="blooddisease" id="blooddisease"> <label for="blooddisease">Yes</label>
+                        <input type="radio" name="blooddisease" id="blooddisease" checked> <label for="blooddisease">No</label>              
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-lg-4 col-md-6 col-sm-12">
+                        <label for="cancer">Cancer</label>
+                        <input type="radio" name="cancer" id="cancer"> <label for="cancer">Yes</label>
+                        <input type="radio" name="cancer" id="cancer" checked> <label for="cancer">No</label>              
+                    </div>
+                    <div class="col col-lg-4 col-md-6 col-sm-12">
+                        <label for="chemotherapy">Chemotherapy</label>
+                        <input type="radio" name="chemotherapy" id="chemotherapy"> <label for="asthma">Yes</label>
+                        <input type="radio" name="chemotherapy" id="chemotherapy" checked> <label for="chemotherapy">No</label>              
+                    </div>
+                    <div class="col col-lg-4 col-md-6 col-sm-12">
+                        <label for="convulsions">Convulsions</label>
+                        <input type="radio" name="convulsions" id="convulsions"> <label for="convulsions">Yes</label>
+                        <input type="radio" name="convulsions" id="convulsions" checked> <label for="convulsions">No</label>              
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-lg-4 col-md-6 col-sm-12">
+                        <label for="diabetes">Diabetes</label>
+                        <input type="radio" name="diabetes" id="diabetes"> <label for="diabetes">Yes</label>
+                        <input type="radio" name="diabetes" id="diabetes" checked> <label for="diabetes">No</label>              
+                    </div>
+                    <div class="col col-lg-4 col-md-6 col-sm-12">
+                        <label for="drugaddiction">Drug Addiction</label>
+                        <input type="radio" name="drugaddiction" id="drugaddiction"> <label for="drugaddiction">Yes</label>
+                        <input type="radio" name="drugaddiction" id="drugaddiction" checked> <label for="drugaddiction">No</label>              
+                    </div>
+                    <div class="col col-lg-4 col-md-6 col-sm-12">
+                        <label for="heartattack">Heart Attack</label>
+                        <input type="radio" name="heartattack" id="heartattack"> <label for="heartattack">Yes</label>
+                        <input type="radio" name="heartattack" id="heartattack" checked> <label for="heartattack">No</label>              
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-lg-4 col-md-6 col-sm-12">
+                        <label for="heartpacemaker">Heart Pacemaker</label>
+                        <input type="radio" name="heartpacemaker" id="heartpacemaker"> <label for="heartpacemaker">Yes</label>
+                        <input type="radio" name="heartpacemaker" id="heartpacemaker" checked> <label for="heartpacemaker">No</label>              
+                    </div>
+                    <div class="col col-lg-4 col-md-6 col-sm-12">
+                        <label for="hepatitis">Hepatitis</label>
+                        <input type="radio" name="hepatitis" id="hepatitis"> <label for="hepatitis">Yes</label>
+                        <input type="radio" name="hepatitis" id="hepatitis" checked> <label for="hepatitis">No</label>             
+                    </div>
+                    <div class="col col-lg-4 col-md-6 col-sm-12">
+                        <label for="herpes">Herpes</label>
+                        <input type="radio" name="herpes" id="herpes"> <label for="herpes">Yes</label>
+                        <input type="radio" name="herpes" id="herpes" checked> <label for="herpes">No</label>              
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-lg-4 col-md-6 col-sm-12">
+                        <label for="highbp">High Blood Pressure</label>
+                        <input type="radio" name="highbp" id="highbp"> <label for="highbp">Yes</label>
+                        <input type="radio" name="highbp" id="highbp" checked> <label for="highbp">No</label>              
+                    </div>
+                    <div class="col col-lg-4 col-md-6 col-sm-12">
+                        <label for="highcholesterol">High Cholesterol</label>
+                        <input type="radio" name="highcholesterol" id="highcholesterol"> <label for="highcholesterol">Yes</label>
+                        <input type="radio" name="highcholesterol" id="highcholesterol" checked> <label for="highcholesterol">No</label>              
+                    </div>
+                    <div class="col col-lg-4 col-md-6 col-sm-12">
+                        <label for="kidneyproblems">Kidney Problems</label>
+                        <input type="radio" name="kidneyproblems" id="kidneyproblems"> <label for="kidneyproblems">Yes</label>
+                        <input type="radio" name="kidneyproblems" id="kidneyproblems" checked> <label for="kidneyproblems">No</label>              
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-lg-4 col-md-6 col-sm-12">
+                        <label for="liverdisease">Liver Disease</label>
+                        <input type="radio" name="liverdisease" id="liverdisease"> <label for="liverdisease">Yes</label>
+                        <input type="radio" name="liverdisease" id="liverdisease" checked> <label for="liverdisease">No</label>
+                    </div>
+                    <div class="col col-lg-4 col-md-6 col-sm-12">
+                        <label for="lowbp">Low Blood Pressure</label>
+                        <input type="radio" name="lowbp" id="lowbp"> <label for="lowbp">Yes</label>
+                        <input type="radio" name="lowbp" id="lowbp" checked> <label for="lowbp">No</label>
+                    </div>
+                    <div class="col col-lg-4 col-md-6 col-sm-12">
+                        <label for="lungdisease">Lung Disease</label>
+                        <input type="radio" name="lungdisease" id="lungdisease"> <label for="lungdisease">Yes</label>
+                        <input type="radio" name="lungdisease" id="lungdisease" checked> <label for="lungdisease">No</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-lg-4 col-md-6 col-sm-12">
+                        <label for="psychatriccare">Psychatric Care</label>
+                        <input type="radio" name="psychatriccare" id="psychatriccare"> <label for="psychatriccare">Yes</label>
+                        <input type="radio" name="psychatriccare" id="psychatriccare" checked> <label for="psychatriccare">No</label>
+                    </div>
+                    <div class="col col-lg-4 col-md-6 col-sm-12">
+                        <label for="thyroiddisease">Thyroid Disease</label>
+                        <input type="radio" name="thyroiddisease" id="thyroiddisease"> <label for="thyroiddisease">Yes</label>
+                        <input type="radio" name="thyroiddisease" id="thyroiddisease" checked> <label for="thyroiddisease">No</label>
+                    </div>
+                    <div class="col col-lg-4 col-md-6 col-sm-12">
+                        <label for="tuberculosis">Tuberculosis</label>
+                        <input type="radio" name="tuberculosis" id="tuberculosis"> <label for="tuberculosis">Yes</label>
+                        <input type="radio" name="tuberculosis" id="tuberculosis" checked> <label for="tuberculosis">No</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="anyotherdisease">Have you suffered from any serious illness not metioned above?</label>
+                        <input type="radio" name="anyotherdisease" id="anyotherdisease"> <label for="anyotherdisease">Yes</label>
+                        <input type="radio" name="anyotherdisease" id="anyotherdisease"> <label for="anyotherdisease">No</label>
+                        <input type="text" name="anyotherdisease" id="anyotherdisease" size="30vw" placeholder="If Yes Please Specify">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <button type="submit" class="btn btn-success"><b>Submit Form</b></button>
+            </div>
+            <div class="col">
+                <button type="reset" class="btn btn-success"><b>Reset Form</b></button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

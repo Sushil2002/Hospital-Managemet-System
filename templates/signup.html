@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Sign Up\styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    <link rel="stylesheet" href="styles.css">
+    <title>Sign Up</title>
+</head>
+<body>
+    <header>
+        <div class="topnav">
+            <a class="active" href="home1.html">Home</a>
+            <a href="#contact">Contact</a>
+            <a href="Aboutus.html">About</a>
+            <a href="Login.html">Login</a>
+            <a href="Sign Up/SignUp.html">Sign Up</a>
+          </div>
+      </header>
+
+    <div class="container">
+        <h1>Sign Up</h1>
+        <p>Please enter the following details.</p>
+        <form class="add_info">
+            <label for="name"><b>Name: </b></label><br><input type="text" name="name" id="name" placeholder="Your Name">
+            <br><hr>
+            <label for="username"><b>User Name: </b></label><br><input type="text" name="username" id="username" placeholder="User_Name">
+            <br><hr>
+            <label for="emailid"><b>Email ID: </b></label><br><input type="email"  name="emailid" id="emailid" placeholder="Email-ID">
+            <br><hr>
+            <label for="uprn"><b>UPR Number: </b></label><br><input type="text" name="uprn" id="uprn" placeholder="Registration Number">
+            <br><hr>
+            <label for="password"><b>Password: </b></label><br><input type="password" name="password" id="password" placeholder="Password">
+            <br><hr>
+            <label for="reenter-psw"><b>Re-enter Password: </b></label><br><input type="password" name="reenter-psw" id="reenter-psw" placeholder="Re-enter Password">
+            <br><hr>
+        </form>
+        <button type="submit"  id="signUp" class="registerbtn"><b>Register</b></button>
+    </div>
+    <div class="signin">
+        <p>Already have an account? <a href="#">Sign In</a></p>
+    </div>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js";
+        // import { initializeApp } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-Anal.js";
+        import { getDatabase } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-database.js";
+        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.js";
+        
+        const firebaseConfig = {
+  apiKey: "AIzaSyAI-YWzRI0qCNlUlmePSP2L0ryhkFqhvTg",
+  authDomain: "fir-49cb9.firebaseapp.com",
+  projectId: "fir-49cb9",
+  storageBucket: "fir-49cb9.appspot.com",
+  messagingSenderId: "994530101705",
+  appId: "1:994530101705:web:60ffbd0eb1ccf3d7518018",
+  measurementId: "G-QDVR58LRPR"
+};
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database=getDatabase(app);
+        const auth = getAuth();
+        // const auth = getAnalytics(Auth);
+        signUp.addEventListener('click',(e)=>{
+            var email= document.getElementById('emailid').value;
+            var password= document.getElementById('password').value;
+            var usename=document.getElementById('username').value;
+            createUserWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    const user = userCredential.user;
+    FirebaseFirestore.instance.co
+    alert('User Created');
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    alert('Error Message' +  error);
+    // ..
+      });
+ });
+      </script>
+      
+</body>
+</html>
